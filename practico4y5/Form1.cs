@@ -20,8 +20,9 @@ namespace practico4y5
             }
             else
             {
-                
-                for(int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++) { 
+
+                for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
+                {
                     ListBoxNumeros.Items.Add(i.ToString());
                 }
             }
@@ -41,6 +42,17 @@ namespace practico4y5
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btnNumerosPares_Click(object sender, EventArgs e)
+        {
+            for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
+            {
+                if(i % 2 == 0 )
+                {
+                    ListBoxNumeros.Items.Add(i.ToString());
+                }
             }
         }
     }

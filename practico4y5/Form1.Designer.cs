@@ -110,6 +110,7 @@
             btnNumerosPares.TabIndex = 12;
             btnNumerosPares.Text = "Numeros Pares";
             btnNumerosPares.UseVisualStyleBackColor = true;
+            btnNumerosPares.Click += btnNumerosPares_Click;
             // 
             // btnNumerosImpares
             // 
