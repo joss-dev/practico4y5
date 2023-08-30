@@ -20,7 +20,10 @@ namespace practico4y5
             }
             else
             {
-                ListBoxNumeros.Items.Add();
+                
+                for(int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++) { 
+                    ListBoxNumeros.Items.Add(i.ToString());
+                }
             }
 
         }
