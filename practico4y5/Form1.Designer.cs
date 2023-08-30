@@ -1,0 +1,164 @@
+﻿namespace practico4y5
+{
+    partial class Form4
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            btnGenerarFuncion = new Button();
+            THasta = new TextBox();
+            TDesde = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            ListBoxNumeros = new ListBox();
+            label3 = new Label();
+            btnNumerosPares = new Button();
+            btnNumerosImpares = new Button();
+            btnNumerosPrimos = new Button();
+            SuspendLayout();
+            // 
+            // btnGenerarFuncion
+            // 
+            btnGenerarFuncion.Location = new Point(324, 81);
+            btnGenerarFuncion.Name = "btnGenerarFuncion";
+            btnGenerarFuncion.Size = new Size(109, 23);
+            btnGenerarFuncion.TabIndex = 9;
+            btnGenerarFuncion.Text = "Generar Funcion";
+            btnGenerarFuncion.UseVisualStyleBackColor = true;
+            // 
+            // THasta
+            // 
+            THasta.Location = new Point(140, 134);
+            THasta.Name = "THasta";
+            THasta.Size = new Size(129, 23);
+            THasta.TabIndex = 8;
+            // 
+            // TDesde
+            // 
+            TDesde.Location = new Point(140, 81);
+            TDesde.Name = "TDesde";
+            TDesde.Size = new Size(129, 23);
+            TDesde.TabIndex = 7;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(67, 137);
+            label2.Name = "label2";
+            label2.Size = new Size(37, 15);
+            label2.TabIndex = 6;
+            label2.Text = "Hasta";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(67, 84);
+            label1.Name = "label1";
+            label1.Size = new Size(39, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Desde";
+            // 
+            // ListBoxNumeros
+            // 
+            ListBoxNumeros.FormattingEnabled = true;
+            ListBoxNumeros.ItemHeight = 15;
+            ListBoxNumeros.Location = new Point(473, 81);
+            ListBoxNumeros.Name = "ListBoxNumeros";
+            ListBoxNumeros.Size = new Size(259, 229);
+            ListBoxNumeros.TabIndex = 10;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(567, 52);
+            label3.Name = "label3";
+            label3.Size = new Size(97, 15);
+            label3.TabIndex = 11;
+            label3.Text = "Lista de numeros";
+            // 
+            // btnNumerosPares
+            // 
+            btnNumerosPares.Location = new Point(324, 133);
+            btnNumerosPares.Name = "btnNumerosPares";
+            btnNumerosPares.Size = new Size(109, 23);
+            btnNumerosPares.TabIndex = 12;
+            btnNumerosPares.Text = "Numeros Pares";
+            btnNumerosPares.UseVisualStyleBackColor = true;
+            // 
+            // btnNumerosImpares
+            // 
+            btnNumerosImpares.Location = new Point(324, 180);
+            btnNumerosImpares.Name = "btnNumerosImpares";
+            btnNumerosImpares.Size = new Size(109, 23);
+            btnNumerosImpares.TabIndex = 13;
+            btnNumerosImpares.Text = "Numeros Impares";
+            btnNumerosImpares.UseVisualStyleBackColor = true;
+            // 
+            // btnNumerosPrimos
+            // 
+            btnNumerosPrimos.Location = new Point(324, 229);
+            btnNumerosPrimos.Name = "btnNumerosPrimos";
+            btnNumerosPrimos.Size = new Size(109, 23);
+            btnNumerosPrimos.TabIndex = 14;
+            btnNumerosPrimos.Text = "Numeros Primos";
+            btnNumerosPrimos.UseVisualStyleBackColor = true;
+            // 
+            // Form4
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnNumerosPrimos);
+            Controls.Add(btnNumerosImpares);
+            Controls.Add(btnNumerosPares);
+            Controls.Add(label3);
+            Controls.Add(ListBoxNumeros);
+            Controls.Add(btnGenerarFuncion);
+            Controls.Add(THasta);
+            Controls.Add(TDesde);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "Form4";
+            Text = "Formulario 4";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Button btnGenerarFuncion;
+        private TextBox THasta;
+        private TextBox TDesde;
+        private Label label2;
+        private Label label1;
+        private ListBox ListBoxNumeros;
+        private Label label3;
+        private Button btnNumerosPares;
+        private Button btnNumerosImpares;
+        private Button btnNumerosPrimos;
+    }
+}
