@@ -120,6 +120,7 @@
             btnNumerosImpares.TabIndex = 13;
             btnNumerosImpares.Text = "Numeros Impares";
             btnNumerosImpares.UseVisualStyleBackColor = true;
+            btnNumerosImpares.Click += btnNumerosImpares_Click;
             // 
             // btnNumerosPrimos
             // 
@@ -129,6 +130,7 @@
             btnNumerosPrimos.TabIndex = 14;
             btnNumerosPrimos.Text = "Numeros Primos";
             btnNumerosPrimos.UseVisualStyleBackColor = true;
+            btnNumerosPrimos.Click += btnNumerosPrimos_Click;
             // 
             // Form4
             // 

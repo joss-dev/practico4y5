@@ -20,7 +20,7 @@ namespace practico4y5
             }
             else
             {
-
+                ListBoxNumeros.Items.Clear();
                 for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
                 {
                     ListBoxNumeros.Items.Add(i.ToString());
@@ -47,9 +47,45 @@ namespace practico4y5
 
         private void btnNumerosPares_Click(object sender, EventArgs e)
         {
+            ListBoxNumeros.Items.Clear();
             for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
             {
-                if(i % 2 == 0 )
+                if (i % 2 == 0)
+                {
+                    ListBoxNumeros.Items.Add(i.ToString());
+                }
+            }
+        }
+
+        private void btnNumerosImpares_Click(object sender, EventArgs e)
+        {
+            ListBoxNumeros.Items.Clear();
+            for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
+            {
+                if (!(i % 2 == 0))
+                {
+                    ListBoxNumeros.Items.Add(i.ToString());
+                }
+            }
+        }
+
+        private void btnNumerosPrimos_Click(object sender, EventArgs e)
+        {
+            ListBoxNumeros.Items.Clear();
+            for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
+            {
+                bool esPrimo = true;
+
+                for (int j = 2; j <= Math.Sqrt(i); j++)
+                {
+                    if (i % j == 0)
+                    {
+                        esPrimo = false;
+                        break;
+                    }
+                }
+
+                if (esPrimo && i > 1)
                 {
                     ListBoxNumeros.Items.Add(i.ToString());
                 }
