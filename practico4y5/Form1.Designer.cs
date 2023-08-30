@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnGenerarFuncion = new Button();
-            THasta = new TextBox();
-            TDesde = new TextBox();
-            label2 = new Label();
             label1 = new Label();
+            label2 = new Label();
+            TDesde = new TextBox();
+            THasta = new TextBox();
+            btnGenerarFuncion = new Button();
             ListBoxNumeros = new ListBox();
             label3 = new Label();
             btnNumerosPares = new Button();
@@ -40,28 +40,14 @@
             btnNumerosPrimos = new Button();
             SuspendLayout();
             // 
-            // btnGenerarFuncion
+            // label1
             // 
-            btnGenerarFuncion.Location = new Point(324, 81);
-            btnGenerarFuncion.Name = "btnGenerarFuncion";
-            btnGenerarFuncion.Size = new Size(109, 23);
-            btnGenerarFuncion.TabIndex = 9;
-            btnGenerarFuncion.Text = "Generar Funcion";
-            btnGenerarFuncion.UseVisualStyleBackColor = true;
-            // 
-            // THasta
-            // 
-            THasta.Location = new Point(140, 134);
-            THasta.Name = "THasta";
-            THasta.Size = new Size(129, 23);
-            THasta.TabIndex = 8;
-            // 
-            // TDesde
-            // 
-            TDesde.Location = new Point(140, 81);
-            TDesde.Name = "TDesde";
-            TDesde.Size = new Size(129, 23);
-            TDesde.TabIndex = 7;
+            label1.AutoSize = true;
+            label1.Location = new Point(67, 84);
+            label1.Name = "label1";
+            label1.Size = new Size(39, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Desde";
             // 
             // label2
             // 
@@ -72,14 +58,31 @@
             label2.TabIndex = 6;
             label2.Text = "Hasta";
             // 
-            // label1
+            // TDesde
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(67, 84);
-            label1.Name = "label1";
-            label1.Size = new Size(39, 15);
-            label1.TabIndex = 5;
-            label1.Text = "Desde";
+            TDesde.Location = new Point(140, 81);
+            TDesde.Name = "TDesde";
+            TDesde.Size = new Size(129, 23);
+            TDesde.TabIndex = 7;
+            TDesde.KeyPress += validacionDesde;
+            // 
+            // THasta
+            // 
+            THasta.Location = new Point(140, 134);
+            THasta.Name = "THasta";
+            THasta.Size = new Size(129, 23);
+            THasta.TabIndex = 8;
+            THasta.KeyPress += validacionHasta;
+            // 
+            // btnGenerarFuncion
+            // 
+            btnGenerarFuncion.Location = new Point(324, 81);
+            btnGenerarFuncion.Name = "btnGenerarFuncion";
+            btnGenerarFuncion.Size = new Size(109, 23);
+            btnGenerarFuncion.TabIndex = 9;
+            btnGenerarFuncion.Text = "Generar Funcion";
+            btnGenerarFuncion.UseVisualStyleBackColor = true;
+            btnGenerarFuncion.Click += btnGenerarFuncion_Click;
             // 
             // ListBoxNumeros
             // 
@@ -150,11 +153,11 @@
 
         #endregion
 
-        private Button btnGenerarFuncion;
-        private TextBox THasta;
-        private TextBox TDesde;
-        private Label label2;
         private Label label1;
+        private Label label2;
+        private TextBox TDesde;
+        private TextBox THasta;
+        private Button btnGenerarFuncion;
         private ListBox ListBoxNumeros;
         private Label label3;
         private Button btnNumerosPares;
