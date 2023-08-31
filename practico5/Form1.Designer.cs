@@ -48,6 +48,14 @@
             pictureBox2 = new PictureBox();
             DataGridPersonas = new DataGridView();
             openFile = new OpenFileDialog();
+            Apellido = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            FechaNacimiento = new DataGridViewTextBoxColumn();
+            Sexo = new DataGridViewTextBoxColumn();
+            Eliminar = new DataGridViewTextBoxColumn();
+            Saldo = new DataGridViewTextBoxColumn();
+            Foto = new DataGridViewTextBoxColumn();
+            Ruta = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -59,7 +67,7 @@
             pictureBox1.Image = Properties.Resources.fondo;
             pictureBox1.Location = new Point(-5, -4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(804, 560);
+            pictureBox1.Size = new Size(838, 560);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -251,17 +259,66 @@
             // 
             DataGridPersonas.AllowUserToOrderColumns = true;
             DataGridPersonas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridPersonas.Location = new Point(12, 399);
+            DataGridPersonas.Columns.AddRange(new DataGridViewColumn[] { Apellido, Nombre, FechaNacimiento, Sexo, Eliminar, Saldo, Foto, Ruta });
+            DataGridPersonas.Location = new Point(-5, 399);
             DataGridPersonas.Name = "DataGridPersonas";
             DataGridPersonas.RowTemplate.Height = 25;
-            DataGridPersonas.Size = new Size(776, 150);
+            DataGridPersonas.Size = new Size(838, 150);
             DataGridPersonas.TabIndex = 3;
+            // 
+            // Apellido
+            // 
+            Apellido.HeaderText = "Apellido";
+            Apellido.Name = "Apellido";
+            Apellido.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            // 
+            // FechaNacimiento
+            // 
+            FechaNacimiento.HeaderText = "Fecha Nacimiento";
+            FechaNacimiento.Name = "FechaNacimiento";
+            FechaNacimiento.ReadOnly = true;
+            // 
+            // Sexo
+            // 
+            Sexo.HeaderText = "Sexo";
+            Sexo.Name = "Sexo";
+            Sexo.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            Eliminar.HeaderText = "Eliminar";
+            Eliminar.Name = "Eliminar";
+            Eliminar.ReadOnly = true;
+            // 
+            // Saldo
+            // 
+            Saldo.HeaderText = "Saldo";
+            Saldo.Name = "Saldo";
+            Saldo.ReadOnly = true;
+            // 
+            // Foto
+            // 
+            Foto.HeaderText = "Foto";
+            Foto.Name = "Foto";
+            Foto.ReadOnly = true;
+            // 
+            // Ruta
+            // 
+            Ruta.HeaderText = "Ruta";
+            Ruta.Name = "Ruta";
+            Ruta.ReadOnly = true;
             // 
             // form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 561);
+            ClientSize = new Size(833, 561);
             Controls.Add(DataGridPersonas);
             Controls.Add(pictureBox2);
             Controls.Add(panel1);
@@ -297,5 +354,13 @@
         private PictureBox pictureBox2;
         private DataGridView DataGridPersonas;
         private OpenFileDialog openFile;
+        private DataGridViewTextBoxColumn Apellido;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn FechaNacimiento;
+        private DataGridViewTextBoxColumn Sexo;
+        private DataGridViewTextBoxColumn Eliminar;
+        private DataGridViewTextBoxColumn Saldo;
+        private DataGridViewTextBoxColumn Foto;
+        private DataGridViewTextBoxColumn Ruta;
     }
 }
