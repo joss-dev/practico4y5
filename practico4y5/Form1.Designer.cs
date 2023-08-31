@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             label1 = new Label();
             label2 = new Label();
             TDesde = new TextBox();
@@ -38,6 +41,8 @@
             btnNumerosPares = new Button();
             btnNumerosImpares = new Button();
             btnNumerosPrimos = new Button();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -64,6 +69,7 @@
             TDesde.Name = "TDesde";
             TDesde.Size = new Size(129, 23);
             TDesde.TabIndex = 7;
+            TDesde.TextChanged += TDesde_TextChanged;
             TDesde.KeyPress += validacionDesde;
             // 
             // THasta
@@ -76,7 +82,7 @@
             // 
             // btnGenerarFuncion
             // 
-            btnGenerarFuncion.Location = new Point(324, 81);
+            btnGenerarFuncion.Location = new Point(67, 190);
             btnGenerarFuncion.Name = "btnGenerarFuncion";
             btnGenerarFuncion.Size = new Size(109, 23);
             btnGenerarFuncion.TabIndex = 9;
@@ -88,7 +94,7 @@
             // 
             ListBoxNumeros.FormattingEnabled = true;
             ListBoxNumeros.ItemHeight = 15;
-            ListBoxNumeros.Location = new Point(473, 81);
+            ListBoxNumeros.Location = new Point(227, 190);
             ListBoxNumeros.Name = "ListBoxNumeros";
             ListBoxNumeros.Size = new Size(259, 229);
             ListBoxNumeros.TabIndex = 10;
@@ -96,7 +102,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(567, 52);
+            label3.Location = new Point(347, 20);
             label3.Name = "label3";
             label3.Size = new Size(97, 15);
             label3.TabIndex = 11;
@@ -104,7 +110,7 @@
             // 
             // btnNumerosPares
             // 
-            btnNumerosPares.Location = new Point(324, 133);
+            btnNumerosPares.Location = new Point(67, 238);
             btnNumerosPares.Name = "btnNumerosPares";
             btnNumerosPares.Size = new Size(109, 23);
             btnNumerosPares.TabIndex = 12;
@@ -114,7 +120,7 @@
             // 
             // btnNumerosImpares
             // 
-            btnNumerosImpares.Location = new Point(324, 180);
+            btnNumerosImpares.Location = new Point(67, 287);
             btnNumerosImpares.Name = "btnNumerosImpares";
             btnNumerosImpares.Size = new Size(109, 23);
             btnNumerosImpares.TabIndex = 13;
@@ -124,7 +130,7 @@
             // 
             // btnNumerosPrimos
             // 
-            btnNumerosPrimos.Location = new Point(324, 229);
+            btnNumerosPrimos.Location = new Point(67, 341);
             btnNumerosPrimos.Name = "btnNumerosPrimos";
             btnNumerosPrimos.Size = new Size(109, 23);
             btnNumerosPrimos.TabIndex = 14;
@@ -132,11 +138,30 @@
             btnNumerosPrimos.UseVisualStyleBackColor = true;
             btnNumerosPrimos.Click += btnNumerosPrimos_Click;
             // 
+            // chart1
+            // 
+            chart1.BackColor = Color.Silver;
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(533, 119);
+            chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(300, 300);
+            chart1.TabIndex = 15;
+            chart1.Text = "Números";
+            chart1.Click += chart1_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 623);
+            ClientSize = new Size(874, 623);
+            Controls.Add(chart1);
             Controls.Add(btnNumerosPrimos);
             Controls.Add(btnNumerosImpares);
             Controls.Add(btnNumerosPares);
@@ -150,6 +175,7 @@
             Name = "Form4";
             Text = "Formulario 4";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,6 +192,6 @@
         private Button btnNumerosPares;
         private Button btnNumerosImpares;
         private Button btnNumerosPrimos;
-        private System.CodeDom.CodeTypeReference chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

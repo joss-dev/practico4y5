@@ -28,6 +28,8 @@ namespace practico4y5
                 }
             }
 
+            chart1_Click(chart1, EventArgs.Empty);
+
         }
 
         private void validacionDesde(object sender, KeyPressEventArgs e)
@@ -63,7 +65,8 @@ namespace practico4y5
                     }
                 }
             }
-            
+            chart1_Click(chart1, EventArgs.Empty);
+
         }
 
         private void btnNumerosImpares_Click(object sender, EventArgs e)
@@ -83,7 +86,8 @@ namespace practico4y5
                     }
                 }
             }
-            
+            chart1_Click(chart1, EventArgs.Empty);
+
         }
 
         private void btnNumerosPrimos_Click(object sender, EventArgs e)
@@ -113,6 +117,27 @@ namespace practico4y5
                         ListBoxNumeros.Items.Add(i.ToString());
                     }
                 }
+            }
+            chart1_Click(chart1, EventArgs.Empty);
+        }
+
+        private void TDesde_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+            // Obtener el gráfico que se hizo clic
+            var chart = (Chart)sender;
+
+            // Limpiar los datos del gráfico
+            chart.Series[0].Points.Clear();
+
+            // Agregar datos de ListBoxNumeros al gráfico
+            for (int i = 0; i < ListBoxNumeros.Items.Count; i++)
+            {
+                chart.Series[0].Points.AddXY(i + 1, int.Parse(ListBoxNumeros.Items[i].ToString()));
             }
         }
     }
