@@ -34,17 +34,17 @@
             button1 = new Button();
             btnFoto = new Button();
             label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            DFecha = new DateTimePicker();
             RMujer = new RadioButton();
             RHombre = new RadioButton();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            TFoto = new TextBox();
+            TSaldo = new TextBox();
+            TApellido = new TextBox();
+            TNombre = new TextBox();
             pictureBox2 = new PictureBox();
             DataGridPersonas = new DataGridView();
             openFile = new OpenFileDialog();
@@ -69,17 +69,17 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnFoto);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(DFecha);
             panel1.Controls.Add(RMujer);
             panel1.Controls.Add(RHombre);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(TFoto);
+            panel1.Controls.Add(TSaldo);
+            panel1.Controls.Add(TApellido);
+            panel1.Controls.Add(TNombre);
             panel1.Location = new Point(86, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(373, 322);
@@ -96,6 +96,7 @@
             button1.Text = "Guardar";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btnFoto
             // 
@@ -118,13 +119,13 @@
             label5.TabIndex = 11;
             label5.Text = "Saldo : ";
             // 
-            // dateTimePicker1
+            // DFecha
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(239, 97);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(84, 23);
-            dateTimePicker1.TabIndex = 10;
+            DFecha.Format = DateTimePickerFormat.Short;
+            DFecha.Location = new Point(239, 97);
+            DFecha.Name = "DFecha";
+            DFecha.Size = new Size(84, 23);
+            DFecha.TabIndex = 10;
             // 
             // RMujer
             // 
@@ -176,7 +177,6 @@
             label3.Size = new Size(176, 22);
             label3.TabIndex = 6;
             label3.Text = "Fecha de Nacimiento : ";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -202,33 +202,33 @@
             label1.TabIndex = 4;
             label1.Text = "Nombre : ";
             // 
-            // textBox4
+            // TFoto
             // 
-            textBox4.Location = new Point(156, 212);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(195, 23);
-            textBox4.TabIndex = 3;
+            TFoto.Location = new Point(156, 212);
+            TFoto.Name = "TFoto";
+            TFoto.Size = new Size(195, 23);
+            TFoto.TabIndex = 3;
             // 
-            // textBox3
+            // TSaldo
             // 
-            textBox3.Location = new Point(156, 166);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(195, 23);
-            textBox3.TabIndex = 2;
+            TSaldo.Location = new Point(156, 166);
+            TSaldo.Name = "TSaldo";
+            TSaldo.Size = new Size(195, 23);
+            TSaldo.TabIndex = 2;
             // 
-            // textBox2
+            // TApellido
             // 
-            textBox2.Location = new Point(158, 53);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(193, 23);
-            textBox2.TabIndex = 1;
+            TApellido.Location = new Point(158, 53);
+            TApellido.Name = "TApellido";
+            TApellido.Size = new Size(193, 23);
+            TApellido.TabIndex = 1;
             // 
-            // textBox1
+            // TNombre
             // 
-            textBox1.Location = new Point(158, 14);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(195, 23);
-            textBox1.TabIndex = 0;
+            TNombre.Location = new Point(158, 14);
+            TNombre.Name = "TNombre";
+            TNombre.Size = new Size(195, 23);
+            TNombre.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -282,12 +282,12 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox TFoto;
+        private TextBox TSaldo;
+        private TextBox TApellido;
+        private TextBox TNombre;
         private RadioButton RMujer;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker DFecha;
         private Label label5;
         private Button btnFoto;
         private Button button1;
