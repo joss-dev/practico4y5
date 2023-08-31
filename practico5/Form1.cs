@@ -37,5 +37,27 @@ namespace practico5
 
             }
         }
+
+        private void mayusculaNombre(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (!string.IsNullOrEmpty(textBox.Text) && char.IsLower(textBox.Text[0]))
+            {
+                textBox.Text = char.ToUpper(textBox.Text[0]) + textBox.Text.Substring(1);
+                textBox.SelectionStart = textBox.Text.Length; // Mover el cursor al final del texto
+            }
+        }
+
+        private void mayusculaApellido(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (!string.IsNullOrEmpty(textBox.Text) && char.IsLower(textBox.Text[0]))
+            {
+                textBox.Text = char.ToUpper(textBox.Text[0]) + textBox.Text.Substring(1);
+                textBox.SelectionStart = textBox.Text.Length; // Mover el cursor al final del texto
+            }
+        }
     }
 }

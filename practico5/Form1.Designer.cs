@@ -223,6 +223,7 @@
             TApellido.Name = "TApellido";
             TApellido.Size = new Size(193, 23);
             TApellido.TabIndex = 1;
+            TApellido.TextChanged += mayusculaApellido;
             // 
             // TNombre
             // 
@@ -230,6 +231,7 @@
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(195, 23);
             TNombre.TabIndex = 0;
+            TNombre.TextChanged += mayusculaNombre;
             // 
             // pictureBox2
             // 
