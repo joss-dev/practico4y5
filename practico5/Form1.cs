@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace practico5
 {
     public partial class form5 : Form
@@ -20,7 +22,19 @@ namespace practico5
             }
             else
             {
-                
+
+            }
+        }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+            openFile.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                string rutaFoto = openFile.FileName;
+                TFoto.Text = rutaFoto;
+
             }
         }
     }

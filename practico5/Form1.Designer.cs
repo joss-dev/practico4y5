@@ -106,6 +106,7 @@
             btnFoto.TabIndex = 12;
             btnFoto.Text = "Foto";
             btnFoto.UseVisualStyleBackColor = true;
+            btnFoto.Click += btnFoto_Click;
             // 
             // label5
             // 
@@ -249,10 +250,6 @@
             DataGridPersonas.RowTemplate.Height = 25;
             DataGridPersonas.Size = new Size(776, 150);
             DataGridPersonas.TabIndex = 3;
-            // 
-            // openFile
-            // 
-            openFile.FileName = "openFile";
             // 
             // form5
             // 
