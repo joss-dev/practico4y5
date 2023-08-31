@@ -47,6 +47,7 @@
             textBox1 = new TextBox();
             pictureBox2 = new PictureBox();
             DataGridPersonas = new DataGridView();
+            openFile = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -249,6 +250,10 @@
             DataGridPersonas.Size = new Size(776, 150);
             DataGridPersonas.TabIndex = 3;
             // 
+            // openFile
+            // 
+            openFile.FileName = "openFile";
+            // 
             // form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -288,5 +293,6 @@
         private Button button1;
         private PictureBox pictureBox2;
         private DataGridView DataGridPersonas;
+        private OpenFileDialog openFile;
     }
 }
