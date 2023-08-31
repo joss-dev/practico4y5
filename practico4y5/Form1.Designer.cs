@@ -136,7 +136,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 623);
             Controls.Add(btnNumerosPrimos);
             Controls.Add(btnNumerosImpares);
             Controls.Add(btnNumerosPares);
@@ -166,5 +166,6 @@
         private Button btnNumerosPares;
         private Button btnNumerosImpares;
         private Button btnNumerosPrimos;
+        private System.CodeDom.CodeTypeReference chart1;
     }
 }

@@ -1,3 +1,4 @@
+using System.Windows.Forms.DataVisualization.Charting;
 namespace practico4y5
 {
     public partial class Form4 : Form
@@ -47,47 +48,70 @@ namespace practico4y5
 
         private void btnNumerosPares_Click(object sender, EventArgs e)
         {
-            ListBoxNumeros.Items.Clear();
-            for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
+            if (string.IsNullOrWhiteSpace(TDesde.Text) || string.IsNullOrWhiteSpace(THasta.Text))
             {
-                if (i % 2 == 0)
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ListBoxNumeros.Items.Clear();
+                for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
                 {
-                    ListBoxNumeros.Items.Add(i.ToString());
+                    if (i % 2 == 0)
+                    {
+                        ListBoxNumeros.Items.Add(i.ToString());
+                    }
                 }
             }
+            
         }
 
         private void btnNumerosImpares_Click(object sender, EventArgs e)
         {
-            ListBoxNumeros.Items.Clear();
-            for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
+            if (string.IsNullOrWhiteSpace(TDesde.Text) || string.IsNullOrWhiteSpace(THasta.Text))
             {
-                if (!(i % 2 == 0))
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ListBoxNumeros.Items.Clear();
+                for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
                 {
-                    ListBoxNumeros.Items.Add(i.ToString());
+                    if (!(i % 2 == 0))
+                    {
+                        ListBoxNumeros.Items.Add(i.ToString());
+                    }
                 }
             }
+            
         }
 
         private void btnNumerosPrimos_Click(object sender, EventArgs e)
         {
-            ListBoxNumeros.Items.Clear();
-            for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
+            if (string.IsNullOrWhiteSpace(TDesde.Text) || string.IsNullOrWhiteSpace(THasta.Text))
             {
-                bool esPrimo = true;
-
-                for (int j = 2; j <= Math.Sqrt(i); j++)
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ListBoxNumeros.Items.Clear();
+                for (int i = int.Parse(TDesde.Text); i <= int.Parse(THasta.Text); i++)
                 {
-                    if (i % j == 0)
+                    bool esPrimo = true;
+
+                    for (int j = 2; j <= Math.Sqrt(i); j++)
                     {
-                        esPrimo = false;
-                        break;
+                        if (i % j == 0)
+                        {
+                            esPrimo = false;
+                            break;
+                        }
                     }
-                }
 
-                if (esPrimo && i > 1)
-                {
-                    ListBoxNumeros.Items.Add(i.ToString());
+                    if (esPrimo && i > 1)
+                    {
+                        ListBoxNumeros.Items.Add(i.ToString());
+                    }
                 }
             }
         }
