@@ -59,5 +59,29 @@ namespace practico5
                 textBox.SelectionStart = textBox.Text.Length; // Mover el cursor al final del texto
             }
         }
+
+        private void validacionSaldo(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void validacionNombre(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true; // Cancela la entrada del carácter
+            }
+        }
+
+        private void validacionApellido(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true; // Cancela la entrada del carácter
+            }
+        }
     }
 }

@@ -205,6 +205,7 @@
             // 
             // TFoto
             // 
+            TFoto.Enabled = false;
             TFoto.Location = new Point(156, 212);
             TFoto.Name = "TFoto";
             TFoto.Size = new Size(195, 23);
@@ -216,6 +217,7 @@
             TSaldo.Name = "TSaldo";
             TSaldo.Size = new Size(195, 23);
             TSaldo.TabIndex = 2;
+            TSaldo.KeyPress += validacionSaldo;
             // 
             // TApellido
             // 
@@ -224,6 +226,7 @@
             TApellido.Size = new Size(193, 23);
             TApellido.TabIndex = 1;
             TApellido.TextChanged += mayusculaApellido;
+            TApellido.KeyPress += validacionApellido;
             // 
             // TNombre
             // 
@@ -232,6 +235,7 @@
             TNombre.Size = new Size(195, 23);
             TNombre.TabIndex = 0;
             TNombre.TextChanged += mayusculaNombre;
+            TNombre.KeyPress += validacionNombre;
             // 
             // pictureBox2
             // 
