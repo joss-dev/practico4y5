@@ -1,8 +1,8 @@
 namespace practico5
 {
-    public partial class Form1 : Form
+    public partial class form5 : Form
     {
-        public Form1()
+        public form5()
         {
             InitializeComponent();
         }
