@@ -47,12 +47,11 @@
             TNombre = new TextBox();
             pictureBox2 = new PictureBox();
             DataGridPersonas = new DataGridView();
-            openFile = new OpenFileDialog();
             Apellido = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
             FechaNacimiento = new DataGridViewTextBoxColumn();
             Sexo = new DataGridViewTextBoxColumn();
-            Eliminar = new DataGridViewTextBoxColumn();
+            BtnEliminar = new DataGridViewButtonColumn();
             Saldo = new DataGridViewTextBoxColumn();
             Foto = new DataGridViewTextBoxColumn();
             Ruta = new DataGridViewTextBoxColumn();
@@ -259,12 +258,13 @@
             // 
             DataGridPersonas.AllowUserToOrderColumns = true;
             DataGridPersonas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridPersonas.Columns.AddRange(new DataGridViewColumn[] { Apellido, Nombre, FechaNacimiento, Sexo, Eliminar, Saldo, Foto, Ruta });
+            DataGridPersonas.Columns.AddRange(new DataGridViewColumn[] { Apellido, Nombre, FechaNacimiento, Sexo, BtnEliminar, Saldo, Foto, Ruta });
             DataGridPersonas.Location = new Point(-5, 399);
             DataGridPersonas.Name = "DataGridPersonas";
             DataGridPersonas.RowTemplate.Height = 25;
             DataGridPersonas.Size = new Size(838, 150);
             DataGridPersonas.TabIndex = 3;
+            DataGridPersonas.CellContentClick += DataGridPersonas_CellContentClick;
             // 
             // Apellido
             // 
@@ -290,11 +290,15 @@
             Sexo.Name = "Sexo";
             Sexo.ReadOnly = true;
             // 
-            // Eliminar
+            // BtnEliminar
             // 
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.Name = "Eliminar";
-            Eliminar.ReadOnly = true;
+            BtnEliminar.DataPropertyName = "Eliminar";
+            BtnEliminar.HeaderText = "Eliminar";
+            BtnEliminar.Name = "BtnEliminar";
+            BtnEliminar.ReadOnly = true;
+            BtnEliminar.Resizable = DataGridViewTriState.True;
+            BtnEliminar.SortMode = DataGridViewColumnSortMode.Automatic;
+            BtnEliminar.Text = "Eliminar";
             // 
             // Saldo
             // 
@@ -353,12 +357,11 @@
         private Button button1;
         private PictureBox pictureBox2;
         private DataGridView DataGridPersonas;
-        private OpenFileDialog openFile;
         private DataGridViewTextBoxColumn Apellido;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn FechaNacimiento;
         private DataGridViewTextBoxColumn Sexo;
-        private DataGridViewTextBoxColumn Eliminar;
+        private DataGridViewButtonColumn BtnEliminar;
         private DataGridViewTextBoxColumn Saldo;
         private DataGridViewTextBoxColumn Foto;
         private DataGridViewTextBoxColumn Ruta;
