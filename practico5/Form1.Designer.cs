@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form5));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             button1 = new Button();
@@ -47,6 +48,7 @@
             TNombre = new TextBox();
             pictureBox2 = new PictureBox();
             DataGridPersonas = new DataGridView();
+            openFile = new OpenFileDialog();
             Apellido = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
             FechaNacimiento = new DataGridViewTextBoxColumn();
@@ -293,9 +295,11 @@
             // BtnEliminar
             // 
             BtnEliminar.DataPropertyName = "Eliminar";
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            BtnEliminar.DefaultCellStyle = dataGridViewCellStyle1;
             BtnEliminar.HeaderText = "Eliminar";
             BtnEliminar.Name = "BtnEliminar";
-            BtnEliminar.ReadOnly = true;
             BtnEliminar.Resizable = DataGridViewTriState.True;
             BtnEliminar.SortMode = DataGridViewColumnSortMode.Automatic;
             BtnEliminar.Text = "Eliminar";
@@ -357,6 +361,7 @@
         private Button button1;
         private PictureBox pictureBox2;
         private DataGridView DataGridPersonas;
+        private OpenFileDialog openFile;
         private DataGridViewTextBoxColumn Apellido;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn FechaNacimiento;
