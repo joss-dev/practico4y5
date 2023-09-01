@@ -20,7 +20,7 @@ namespace practico5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TNombre.Text) || string.IsNullOrWhiteSpace(TApellido.Text) || string.IsNullOrWhiteSpace(TFoto.Text) || string.IsNullOrWhiteSpace(TSaldo.Text) )
+            if (!(string.IsNullOrWhiteSpace(TNombre.Text) || string.IsNullOrWhiteSpace(TApellido.Text) || string.IsNullOrWhiteSpace(TFoto.Text) || string.IsNullOrWhiteSpace(TSaldo.Text)) && !(RHombre.Checked || RMujer.Checked))
             {
                 MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
