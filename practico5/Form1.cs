@@ -1,6 +1,8 @@
 using practico5.Properties;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using System.Diagnostics.Metrics;
+using System.Diagnostics;
 
 namespace practico5
 {
@@ -18,7 +20,7 @@ namespace practico5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TNombre.Text) || string.IsNullOrWhiteSpace(TApellido.Text) || string.IsNullOrWhiteSpace(TFoto.Text))
+            if (string.IsNullOrWhiteSpace(TNombre.Text) || string.IsNullOrWhiteSpace(TApellido.Text) || string.IsNullOrWhiteSpace(TFoto.Text) || string.IsNullOrWhiteSpace(TSaldo.Text) )
             {
                 MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
