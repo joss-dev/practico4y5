@@ -48,7 +48,6 @@
             TNombre = new TextBox();
             pictureBox2 = new PictureBox();
             DataGridPersonas = new DataGridView();
-            openFile = new OpenFileDialog();
             Apellido = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
             FechaNacimiento = new DataGridViewTextBoxColumn();
@@ -57,6 +56,7 @@
             Saldo = new DataGridViewTextBoxColumn();
             Foto = new DataGridViewImageColumn();
             Ruta = new DataGridViewTextBoxColumn();
+            openFile = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();

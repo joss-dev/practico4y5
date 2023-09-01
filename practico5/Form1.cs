@@ -49,6 +49,10 @@ namespace practico5
                 {
                     DataGridPersonas.Rows[index].DefaultCellStyle.BackColor = Color.White;
                 }
+                TApellido.Clear();
+                TNombre.Clear();
+                TFoto.Clear();
+                TSaldo.Clear();
             }
         }
 
@@ -73,7 +77,8 @@ namespace practico5
                 {
                     RMujer.Checked = false;
                     RHombre.Checked = true;
-                }else
+                }
+                else
                 {
                     RHombre.Checked = false;
                     RMujer.Checked = true;
@@ -139,6 +144,9 @@ namespace practico5
             }
         }
 
+        private void form5_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
