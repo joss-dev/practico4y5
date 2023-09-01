@@ -1,3 +1,4 @@
+using practico5.Properties;
 using System.Windows.Forms;
 
 namespace practico5
@@ -23,6 +24,7 @@ namespace practico5
             else
             {
                 string rutaImagen = TFoto.Text; // La ruta de la imagen desde el TextBox
+                pictureBox2.Image = Image.FromFile(rutaImagen);
                 Image imagen = Image.FromFile(rutaImagen);
                 decimal saldo = Convert.ToDecimal(TSaldo.Text);
                 string sexo;
@@ -48,7 +50,9 @@ namespace practico5
             // Verificar si se hizo clic en la columna del botón "Eliminar"
             if (e.ColumnIndex == DataGridPersonas.Columns["BtnEliminar"].Index && e.RowIndex >= 0)
             {
+                pictureBox2.Image = Resources.silueta;
                 // Eliminar la fila
+
                 DataGridPersonas.Rows.RemoveAt(e.RowIndex);
             }
         }
