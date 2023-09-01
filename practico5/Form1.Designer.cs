@@ -48,7 +48,6 @@
             TNombre = new TextBox();
             pictureBox2 = new PictureBox();
             DataGridPersonas = new DataGridView();
-            openFile = new OpenFileDialog();
             Apellido = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
             FechaNacimiento = new DataGridViewTextBoxColumn();
@@ -57,6 +56,7 @@
             Saldo = new DataGridViewTextBoxColumn();
             Foto = new DataGridViewTextBoxColumn();
             Ruta = new DataGridViewTextBoxColumn();
+            openFile = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -258,6 +258,7 @@
             // 
             // DataGridPersonas
             // 
+            DataGridPersonas.AllowUserToAddRows = false;
             DataGridPersonas.AllowUserToOrderColumns = true;
             DataGridPersonas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataGridPersonas.Columns.AddRange(new DataGridViewColumn[] { Apellido, Nombre, FechaNacimiento, Sexo, BtnEliminar, Saldo, Foto, Ruta });

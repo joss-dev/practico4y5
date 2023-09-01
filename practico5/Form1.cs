@@ -33,7 +33,7 @@ namespace practico5
                     sexo = "Mujer";
                 }
                 DataGridPersonas.Rows.Add(TApellido.Text, TNombre.Text, DFecha.Text, sexo, "Eliminar", TSaldo.Text, pictureBox2.Text, TFoto.Text);
-                
+
                 if (saldo < 50)
                 {
                     DataGridPersonas.DefaultCellStyle.BackColor = Color.Red;
@@ -44,7 +44,7 @@ namespace practico5
         private void DataGridPersonas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificar si se hizo clic en la columna del botón "Eliminar"
-            if (e.ColumnIndex == DataGridPersonas.Columns["BtnEliminar"].Index && e.RowIndex > 0)
+            if (e.ColumnIndex == DataGridPersonas.Columns["BtnEliminar"].Index && e.RowIndex >= 0)
             {
                 // Eliminar la fila
                 DataGridPersonas.Rows.RemoveAt(e.RowIndex);
