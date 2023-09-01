@@ -59,10 +59,21 @@ namespace practico5
 
                     DataGridPersonas.Rows.RemoveAt(e.RowIndex);
                 }
-                    
+
+            }
+            if (e.ColumnIndex == DataGridPersonas.Columns["Sexo"].Index && e.RowIndex >= 0)
+            {
+                if ("Hombre" == DataGridPersonas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString())
+                {
+                    RMujer.Checked = false;
+                    RHombre.Checked = true;
+                }else
+                {
+                    RHombre.Checked = false;
+                    RMujer.Checked = true;
+                }
             }
         }
-
 
         private void btnFoto_Click(object sender, EventArgs e)
         {
