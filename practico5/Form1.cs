@@ -22,6 +22,8 @@ namespace practico5
             }
             else
             {
+                string rutaImagen = TFoto.Text; // La ruta de la imagen desde el TextBox
+                Image imagen = Image.FromFile(rutaImagen);
                 decimal saldo = Convert.ToDecimal(TSaldo.Text);
                 string sexo;
                 if (RHombre.Checked)
@@ -32,7 +34,7 @@ namespace practico5
                 {
                     sexo = "Mujer";
                 }
-                DataGridPersonas.Rows.Add(TApellido.Text, TNombre.Text, DFecha.Text, sexo, "Eliminar", TSaldo.Text, pictureBox2.Text, TFoto.Text);
+                DataGridPersonas.Rows.Add(TApellido.Text, TNombre.Text, DFecha.Text, sexo, "Eliminar", TSaldo.Text, imagen, TFoto.Text);
 
                 if (saldo < 50)
                 {

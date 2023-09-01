@@ -48,15 +48,15 @@
             TNombre = new TextBox();
             pictureBox2 = new PictureBox();
             DataGridPersonas = new DataGridView();
+            openFile = new OpenFileDialog();
             Apellido = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
             FechaNacimiento = new DataGridViewTextBoxColumn();
             Sexo = new DataGridViewTextBoxColumn();
             BtnEliminar = new DataGridViewButtonColumn();
             Saldo = new DataGridViewTextBoxColumn();
-            Foto = new DataGridViewTextBoxColumn();
+            Foto = new DataGridViewImageColumn();
             Ruta = new DataGridViewTextBoxColumn();
-            openFile = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -314,8 +314,11 @@
             // Foto
             // 
             Foto.HeaderText = "Foto";
+            Foto.ImageLayout = DataGridViewImageCellLayout.Zoom;
             Foto.Name = "Foto";
             Foto.ReadOnly = true;
+            Foto.Resizable = DataGridViewTriState.True;
+            Foto.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // Ruta
             // 
@@ -369,7 +372,7 @@
         private DataGridViewTextBoxColumn Sexo;
         private DataGridViewButtonColumn BtnEliminar;
         private DataGridViewTextBoxColumn Saldo;
-        private DataGridViewTextBoxColumn Foto;
+        private DataGridViewImageColumn Foto;
         private DataGridViewTextBoxColumn Ruta;
     }
 }
