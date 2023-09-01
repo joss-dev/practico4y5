@@ -1,5 +1,6 @@
 using practico5.Properties;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace practico5
 {
@@ -50,10 +51,15 @@ namespace practico5
             // Verificar si se hizo clic en la columna del botón "Eliminar"
             if (e.ColumnIndex == DataGridPersonas.Columns["BtnEliminar"].Index && e.RowIndex >= 0)
             {
-                pictureBox2.Image = Resources.silueta;
-                // Eliminar la fila
+                MsgBoxResult result = (MsgBoxResult)MessageBox.Show("Estas a punto de eliminar un registro", "Eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                if (result == MsgBoxResult.Yes)
+                {
+                    pictureBox2.Image = Resources.silueta;
+                    // Eliminar la fila
 
-                DataGridPersonas.Rows.RemoveAt(e.RowIndex);
+                    DataGridPersonas.Rows.RemoveAt(e.RowIndex);
+                }
+                    
             }
         }
 
