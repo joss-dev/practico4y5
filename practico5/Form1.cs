@@ -37,11 +37,15 @@ namespace practico5
                 {
                     sexo = "Mujer";
                 }
-                DataGridPersonas.Rows.Add(TApellido.Text, TNombre.Text, DFecha.Text, sexo, "Eliminar", TSaldo.Text, imagen, TFoto.Text);
+                int index = DataGridPersonas.Rows.Add(TApellido.Text, TNombre.Text, DFecha.Text, sexo, "Eliminar", TSaldo.Text, imagen, TFoto.Text);
 
                 if (saldo < 50)
                 {
-                    DataGridPersonas.DefaultCellStyle.BackColor = Color.Red;
+                    DataGridPersonas.Rows[index].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    DataGridPersonas.Rows[index].DefaultCellStyle.BackColor = Color.White;
                 }
             }
         }
